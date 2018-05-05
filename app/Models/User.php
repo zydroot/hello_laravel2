@@ -1,14 +1,15 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable; //消息通知
 
+    //protected $table = 'users';
     /**
      * The attributes that are mass assignable.
      *
@@ -16,7 +17,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name', 'email', 'password',
-    ];
+    ]; // 过滤用户提交字段
 
     /**
      * The attributes that should be hidden for arrays.
