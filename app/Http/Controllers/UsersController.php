@@ -9,7 +9,7 @@ use Auth;
 class UsersController extends Controller
 {
 
-    public function index(){
+    public function index(){ //?
         return view('users.index');
     }
 
@@ -38,15 +38,15 @@ class UsersController extends Controller
         return redirect()->route('users.show', [$user->id]);
     }
 
-    public function edit(User $user){
-        return view('users.edit');
+    public function edit(User $user){ //?
+        return view('users.edit', compact('user'));
     }
 
-    public function update(){
+    public function update(){ //?
 
     }
 
-    public function destroy(){
+    public function destroy(){ //?
 
     }
 }
