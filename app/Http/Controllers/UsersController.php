@@ -42,7 +42,7 @@ class UsersController extends Controller
         return view('users.edit', compact('user'));
     }
 
-    public function update(){ //?
+    public function update(Request $request, User $user){ //?
 
     }
 
