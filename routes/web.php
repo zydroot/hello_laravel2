@@ -35,3 +35,5 @@ Route::get('users/{user}/edit', 'UsersController@edit')->name('edit');
 //Route::delete('users/{user}', 'UsersController@destroy')->name('destroy');*/
 
 Route::get('login', 'SessionsController@create')->name('login');
+Route::post('login', 'SessionsController@store')->name('login');
+Route::delete('logout', 'SessionsController@destroy')->name('logout');
